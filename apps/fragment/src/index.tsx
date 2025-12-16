@@ -1,7 +1,8 @@
 import { app } from './app';
 import { serve } from '@hono/node-server';
+import { env } from '@/env';
 
 serve({
   fetch: app.fetch,
-  port: 5173,
+  port: env.APP_PORT,
 });

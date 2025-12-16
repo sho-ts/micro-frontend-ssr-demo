@@ -2,7 +2,7 @@
   "name": "fragment",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.tsx",
+    "dev": "tsx watch --env-file=.env src/index.tsx",
     "prepare": "panda codegen",
     "panda": "panda"
   },
@@ -19,6 +19,7 @@
     "tsx": "^4.21.0"
   },
   "dependencies": {
+    "@t3-oss/env-core": "^0.13.10",
     "hono": "^4.11.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
