@@ -7,5 +7,5 @@ app.use('/static/*', serveStatic({ root: './' }));
 
 serve({
   fetch: app.fetch,
-  port: env.APP_PORT,
+  port: env.VITE_APP_PORT,
 });

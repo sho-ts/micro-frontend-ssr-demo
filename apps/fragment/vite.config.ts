@@ -17,4 +17,9 @@ export default defineConfig({
       fileName: () => 'main.js',
     },
   },
+  define: {
+    process: {
+      env: {},
+    },
+  },
 });

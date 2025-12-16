@@ -12,7 +12,7 @@ export const AppHeader = ({ name }: Props) => {
   return (
     <header className={styles.root}>
       <div className={styles.logo}>
-        <img src={`${env.APP_URL}/static/dummy-logo.svg`} alt="dummy logo" />
+        <img src={`${env.VITE_APP_URL}/static/dummy-logo.svg`} alt="dummy logo" />
       </div>
       <span className={styles.userName}>{name}</span>
     </header>
