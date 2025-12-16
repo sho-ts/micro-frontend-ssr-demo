@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <react-app-header name="dummy">{!! $prenderedHeader !!}</react-app-header>
+    <react-app-header props="{{ json_encode($header['props']) }}">{!! $header['html'] !!}</react-app-header>
     <script src="http://localhost:5174/static/client/main.js" type="module"></script>
 </body>
 

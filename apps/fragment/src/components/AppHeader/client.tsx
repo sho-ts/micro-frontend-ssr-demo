@@ -3,9 +3,9 @@ import { AppHeader, AppHeaderSchema } from '.';
 
 class ReactAppHeader extends HTMLElement {
   connectedCallback() {
-    const name = this.getAttribute('name');
+    const name = this.getAttribute('props') ?? '{}';
 
-    const { data, error } = AppHeaderSchema.safeParse({ name });
+    const { data, error } = AppHeaderSchema.safeParse(JSON.parse(name));
 
     if (error) return console.error(error.message);
 
