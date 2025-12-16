@@ -2,15 +2,20 @@
   "name": "fragment",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.tsx"
+    "dev": "tsx watch src/index.tsx",
+    "prepare": "panda codegen",
+    "panda": "panda"
   },
   "devDependencies": {
     "@hono/node-server": "^1.19.7",
+    "@pandacss/dev": "^1.7.1",
     "@types/node": "^25.0.2",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "esbuild": "^0.21.4",
+    "install": "^0.13.0",
     "npm-run-all2": "^6.2.0",
+    "pnpm": "^10.26.0",
     "tsx": "^4.21.0"
   },
   "dependencies": {

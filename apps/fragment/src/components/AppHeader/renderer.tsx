@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import { AppHeader } from '@/components/AppHeader';
+import { AppHeader } from '@/src/components/AppHeader';
 import { validator } from 'hono/validator';
 import { renderToString } from 'react-dom/server';
 import z from 'zod';
