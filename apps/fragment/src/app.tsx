@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import { AppHeaderRenderer } from '@/src/components/AppHeader/renderer';
+import { AppHeaderRenderer } from '@/src/components/AppHeader/server';
 
 export const app = new Hono();
 
