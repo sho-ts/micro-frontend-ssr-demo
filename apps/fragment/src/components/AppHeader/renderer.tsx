@@ -15,7 +15,7 @@ AppHeaderRenderer.get(
   validator('query', (value, c) => {
     const { data, error } = schema.safeParse(value);
 
-    if (error) return c.json({ message: 'Invalid query parameters' }, 401);
+    if (error) return c.json({ message: 'Invalid query parameters' }, 400);
 
     return data;
   }),
