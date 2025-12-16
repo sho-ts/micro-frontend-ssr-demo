@@ -10,7 +10,7 @@ Route::get('/', function () {
     $headerResponse = Http::get('http://host.docker.internal:5174/AppHeader', $headerProps);
     $header = [
         'html' => $headerResponse->body(),
-        'props' => $headerProps,
+        'props' => json_encode($headerProps),
     ];
 
     return view('welcome')->with(
