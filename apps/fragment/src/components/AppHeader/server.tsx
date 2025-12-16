@@ -1,19 +1,14 @@
 import { Hono } from 'hono';
-import { AppHeader } from '@/src/components/AppHeader';
+import { AppHeader, AppHeaderSchema } from '@/src/components/AppHeader';
 import { validator } from 'hono/validator';
 import { renderToString } from 'react-dom/server';
-import z from 'zod';
 
 export const AppHeaderRenderer = new Hono();
-
-const schema = z.object({
-  name: z.string().min(1),
-});
 
 AppHeaderRenderer.get(
   '/',
   validator('query', (value, c) => {
-    const { data, error } = schema.safeParse(value);
+    const { data, error } = AppHeaderSchema.safeParse(value);
 
     if (error) return c.json({ message: 'Invalid query parameters' }, 400);
 

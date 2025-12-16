@@ -1,9 +1,12 @@
 import { env } from '@/env';
 import { css } from '@/styled-system/css';
+import z from 'zod';
 
-type Props = {
-  name: string;
-};
+export const AppHeaderSchema = z.object({
+  name: z.string().min(1),
+});
+
+type Props = z.infer<typeof AppHeaderSchema>;
 
 export const AppHeader = ({ name }: Props) => {
   return (
