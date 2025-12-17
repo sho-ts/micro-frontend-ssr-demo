@@ -1,4 +1,5 @@
 import { env } from '@/env';
+import { AppUserInfo } from '@/src/components/AppHeader/AppUserInfo';
 import { css } from '@/styled-system/css';
 import z from 'zod';
 
@@ -14,7 +15,7 @@ export const AppHeader = ({ name }: Props) => {
       <div className={styles.logo}>
         <img src={`${env.VITE_APP_URL}/static/dummy-logo.svg`} alt="dummy logo" />
       </div>
-      <span className={styles.userName}>{name}</span>
+      <AppUserInfo css={styles.userInfo} name={name} />
     </header>
   );
 };
@@ -30,9 +31,8 @@ const styles = {
     justifyContent: 'space-between',
     color: 'white',
   }),
-  userName: css({
+  userInfo: css.raw({
     marginLeft: 'auto',
-    fontWeight: 'bold',
   }),
   logo: css({
     width: '160px',
