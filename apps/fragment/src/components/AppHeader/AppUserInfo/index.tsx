@@ -46,7 +46,7 @@ const styles = {
     top: '100%',
     width: '100%',
     backgroundColor: 'gray.800',
-    padding: '8px',
+    padding: '16px',
     borderRadius: 'sm',
     display: 'flex',
     flexDirection: 'column',
