@@ -7,6 +7,13 @@ export const app = new Hono();
 
 app.use('*', cors());
 
-const ssrComponents = [AppHeader];
+const ssrComponents = [
+  {
+    route: 'AppHeader',
+    component: AppHeader,
+  },
+];
 
-ssrComponents.forEach((component) => defineServerSideComponent(app, component, AppHeaderSchema));
+ssrComponents.forEach(({ route, component }) =>
+  defineServerSideComponent(app, route, component, AppHeaderSchema)
+);

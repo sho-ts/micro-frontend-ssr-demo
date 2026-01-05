@@ -5,11 +5,12 @@ import z from 'zod';
 
 export const defineServerSideComponent = <T extends z.ZodObject<Record<string, z.ZodType>>>(
   router: Hono,
+  route: string,
   Component: (props: z.infer<T>) => React.ReactNode,
   schema?: T
 ) => {
   router.get(
-    `/${Component.name}`,
+    `/${route}`,
     validator('query', (value, c) => {
       const result = schema?.safeParse(value);
 
