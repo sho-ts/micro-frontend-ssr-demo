@@ -11,9 +11,10 @@ const ssrComponents = [
   {
     route: 'AppHeader',
     component: AppHeader,
+    schema: AppHeaderSchema,
   },
 ];
 
-ssrComponents.forEach(({ route, component }) =>
-  defineServerSideComponent(app, route, component, AppHeaderSchema)
+ssrComponents.forEach(({ route, component, schema }) =>
+  defineServerSideComponent(app, route, component, schema)
 );
